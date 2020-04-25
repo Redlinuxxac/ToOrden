@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    
     public function addresses()
     {
         return $this->morphMany(Address::class, 'addressable');
