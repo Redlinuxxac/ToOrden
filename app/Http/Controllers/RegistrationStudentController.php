@@ -14,7 +14,7 @@ class RegistrationStudentController extends Controller
      */
     public function index()
     {
-        //
+        return view('inscripcion.index');
     }
 
     /**
