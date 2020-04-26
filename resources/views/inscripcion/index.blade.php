@@ -21,7 +21,7 @@
             </li>
             <li class="breadcrumb-item"><a href="#">Incripcion</a>
             </li>
-            <li class="breadcrumb-item active">Nuevo Estudiante
+            <li class="breadcrumb-item active">Lista de Estudiatnes
             </li>
         </ol>
     </div>
