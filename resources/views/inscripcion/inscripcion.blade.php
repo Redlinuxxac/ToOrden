@@ -110,8 +110,8 @@
                 <label>Ultimo año cursado</label>
             </div>
             <div class="input-field col s6">
-                <input placeholder="Placeholder" id="Nombre" type="text" class="validate">
-                <label for="Nombre">Escuela de procedencia</label>
+                <input placeholder="Placeholder" id="NombreEscuela" type="text" class="validate">
+                <label for="NombreEscuela">Escuela de procedencia</label>
             </div>
         </div>
 
