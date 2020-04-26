@@ -39,7 +39,5 @@ Route::get('/panel/inicio', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/inscripcion', function () {
-    
-    return view('inscripcion.inscripcion');
-})->name('inscripcion');
+
+Route::resource('/inscripcion', 'RegistrationStudentController')->names('inscripcion');

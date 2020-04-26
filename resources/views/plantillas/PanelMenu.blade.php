@@ -82,7 +82,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('inscripcion') }}">
+                    <a href="{{ route('inscripcion.create') }}">
                        <i class="material-icons">radio_button_unchecked</i>
                        <span data-i18n="Sparkline Charts">Incripcion</span>
                     </a>
