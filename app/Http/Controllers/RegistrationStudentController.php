@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 class RegistrationStudentController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -46,7 +55,7 @@ class RegistrationStudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
+        return view('inscripcion.show');
     }
 
     /**
@@ -57,7 +66,7 @@ class RegistrationStudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        return view('inscripcion.edit');
     }
 
     /**

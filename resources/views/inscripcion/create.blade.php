@@ -1,5 +1,5 @@
 @extends('layouts.app0')
-@section('title', 'Panel')
+@section('title', 'Inscripicion')
 @section('MenuLogo')
 @include('plantillas.MenuLogo')
 @endsection
