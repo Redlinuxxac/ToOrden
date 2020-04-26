@@ -30,7 +30,7 @@ class HomeController extends Controller
         $tipoUser = $user->userable_type;
         $student = Student::find(1);
         $student->classes();
-        dd($student->classes());
+        //dd($student->classes());
         //dd($user->userable->teacher->classes());
         //dd($user->userable);
         return view('dashboard.home');
