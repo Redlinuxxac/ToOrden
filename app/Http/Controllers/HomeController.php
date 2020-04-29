@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Student;
+use App\Teacher;
+
 class HomeController extends Controller
 {
     /**
@@ -29,8 +31,8 @@ class HomeController extends Controller
         $user->school;
         $tipoUser = $user->userable_type;
         $student = Student::find(1);
-        $student->classes();
-        //dd($student->classes());
+        $student->sections();
+        //dd($student->sections);
         //dd($user->userable->teacher->classes());
         //dd($user->userable);
         return view('dashboard.home');

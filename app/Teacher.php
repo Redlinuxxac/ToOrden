@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Teacher extends Model
 {
-    public function classes()
+    public function sections()
     {
-        return $this->hasMany(Classes::class);
+        return $this->belongsToMany(Section::class,'section_student_teacher')
+            ->withPivot('section_id');
     }
     public function students()
     {
-        return $this->hasManyThrough(Student::class, Classes::class,'country_id', 'teacher_id');
+        return $this->belongsToMany(Student::class,'section_student_teacher')
+            ->withPivot('student_id');
     }
     public function addresses()
     {

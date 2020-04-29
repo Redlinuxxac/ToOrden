@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Classes extends Model
+class Section extends Model
 {
     //
     public function teacher()
@@ -14,6 +14,6 @@ class Classes extends Model
     
     public function students()
     {
-        return $this->belongsToMany(Student::class, 'class_student');
+        return $this->belongsToMany(Student::class);
     }
 }
