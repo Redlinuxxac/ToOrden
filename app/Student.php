@@ -21,7 +21,7 @@ class Student extends Model
     }
     public function phones()
     {
-        return $this->morphMany(Phone::class, 'poneable');
+        return $this->morphMany(Phone::class, 'phoneable');
     }
     public function emails()
     {

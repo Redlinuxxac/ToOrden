@@ -16,7 +16,7 @@ class SchoolSeeder extends Seeder
             $school->users()->save(factory(App\User::class)->make());
         });
 
-        //Dias
+        //llanado los Dias de la semana
         DB::insert('insert into days (name) values ( ?)', [ 'Lunes']);                                                            
         DB::insert('insert into days (name) values ( ?)', [ 'Martes']);                                                             
         DB::insert('insert into days (name) values ( ?)', [ 'Miercoles']);                                                            
@@ -24,14 +24,14 @@ class SchoolSeeder extends Seeder
         DB::insert('insert into days (name) values ( ?)', [ 'Viernes']);                                                            
         DB::insert('insert into days (name) values ( ?)', [ 'Sabado']);                                                            
         DB::insert('insert into days (name) values ( ?)', [ 'Domingo']); 
-        // por la prueba voy a inseta materia, periodo estudiatnes y secciones aqui
-        
+
+        // pora la prueba voy a inseta materia, periodo estudiatnes y secciones aqui        
         DB::insert('insert into matters (name) values ( ?)', [ 'Leguan Española']);                                                            
         DB::insert('insert into matters (name) values ( ?)', [ 'Matematicas']);                                                            
         DB::insert('insert into matters (name) values ( ?)', [ 'Ciencias Naturales']);                                                            
         DB::insert('insert into matters (name) values ( ?)', [ 'Ciencias Sociales']);
 
-                                                                    
+        //Agrregando un pariodo separa por semestre                                                            
         DB::insert('insert into periods (name, start_date, end_date) values (?, ?, ?)', [ '2019/2020 1', '2019-08-15' , '2020-06-15' ]);                                                            
         DB::insert('insert into periods (name, start_date, end_date) values (?, ?, ?)', [ '2019/2020 2', '2019-08-15' , '2020-06-15' ]);
 

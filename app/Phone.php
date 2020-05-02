@@ -15,7 +15,7 @@ class Phone extends Model
         'name',
     ];
     
-    public function poneable()
+    public function phoneable()
     {
         return $this->morphTo();
     }
