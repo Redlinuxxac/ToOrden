@@ -228,5 +228,10 @@
         var elems = document.querySelectorAll('select');
         var instances = M.FormSelect.init(elems, );
     });
+
+    $(document).ready(function() {
+              $('#ToOrdentable').DataTable();
+              $('select').formSelect().string('browser-default');
+     } );
 </script>
 @endsection
