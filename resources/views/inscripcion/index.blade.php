@@ -79,7 +79,7 @@
 </div>
 <div class="card-panel">
 
-    <table id="ToOrdentable" class="display responsive nowrap" style="">
+    <table id="ToOrdentable" class="display responsive nowrap">
         <thead>
             <tr>
                 <th>Matricula</th>
