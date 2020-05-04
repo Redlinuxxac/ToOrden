@@ -23,8 +23,8 @@ class RegistrationStudentController extends Controller
      */
     public function index()
     {
-        $student = Student::find(1);
-        return view('inscripcion.index', [$student]);
+        $students = Student::paginate(25);
+        return view('inscripcion.index', ['students' => $students]);
     }
 
     /**
