@@ -13,6 +13,22 @@
 @include('plantillas.MenuDerecho')
 @endsection
 @section('content')
+<style>
+    .paginar>nav{
+        background: #fff;
+    }
+    .paginar>nav>ul{
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pagination li.active {
+        background: #fff;
+        color: blue;
+        line-height: initial;
+        font-size: 21px;
+    }
+</style>
 <div class="row">
     <div class="col  s12">
         <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Listado de Estudiantes</span></h5>
@@ -90,101 +106,30 @@
                 <th>Grado</th>
                 <th>Editar</th>
                 <th>ver</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+           @foreach($students as  $student)
+           <tr>
                 <td>00002010</td>
-                <td>peguero paulino</td>
-                <td>otniel Radhames</td>
+                <td>{{ $student->lastname1 }} {{ $student->lastname2 }}</td>
+                <td>{{ $student->name }}</td>
                 <td>28</td>
-                <td>M</td>
+                <td>{{ $student->sex }}</td>
                 <td>4to Inf.</td>
                 <td><a href="#"><i class="material-icons">edit</i></a></td>
                 <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
+                <td><a href="#"><i class="material-icons">delete</i></a></td>
 
             </tr>
-            <tr>
-                <td>00002011</td>
-                <td>pujols Pimenter</td>
-                <td>Yaline</td>
-                <td>21</td>
-                <td>F</td>
-                <td>4to infe.</td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
-
-            </tr>
-            <tr>
-                <td>00002012</td>
-                <td>lorenzon taberas</td>
-                <td>betuel javiel</td>
-                <td>25</td>
-                <td>M</td>
-                <td>4to Inf.</td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
-
-            </tr>
-            <tr>
-                <td>00002013</td>
-                <td>peguero paulino</td>
-                <td>otniel Radhames</td>
-                <td>28</td>
-                <td>M</td>
-                <td>4to Inf.</td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
-
-            </tr>
-            <tr>
-                <td>00002010</td>
-                <td>peguero paulino</td>
-                <td>otniel Radhames</td>
-                <td>28</td>
-                <td>M</td>
-                <td>4to Inf.</td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
-
-            </tr>
-            <tr>
-                <td>00002011</td>
-                <td>pujols Pimenter</td>
-                <td>Yaline</td>
-                <td>21</td>
-                <td>F</td>
-                <td>4to infe.</td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
-
-            </tr>
-            <tr>
-                <td>00002012</td>
-                <td>lorenzon taberas</td>
-                <td>betuel javiel</td>
-                <td>25</td>
-                <td>M</td>
-                <td>4to Inf.</td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
-
-            </tr>
-            <tr>
-                <td>00002013</td>
-                <td>peguero paulino</td>
-                <td>otniel Radhames</td>
-                <td>28</td>
-                <td>M</td>
-                <td>4to Inf.</td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
-
-            </tr>
-
+           @endforeach
         </tbody>
     </table>
 
+    <div class="paginar">
+        {!! $students->render() !!}
+    </div>
 </div>
 </div>
 @endsection
