@@ -39,10 +39,10 @@ nav .nav-wrapper{
 
 }
 
-/* .menu-to .menu-Ez{
+.menu-to .menu-Ez{
 	
 
-} */
+}
 .sidenav{
 	top: 65px;
 	transition: all 0.3s ease;
@@ -145,7 +145,7 @@ span.badge.pill{
 	font-size: 10px;
 }
 .sidenav li.active {
-    /* background-color: ; */
+    background-color: ;
     border-radius: 0 25px 25px 0;
 	margin-right: 10px;
 }
@@ -277,7 +277,7 @@ small {
     font-size: 1rem;
     padding: 8px 16px;
 }
-/* .noti-contendor{
+.noti-contendor{
 	/*display: block;
     width: 160px;
     left: 1282.2px;
@@ -285,8 +285,8 @@ small {
     height: 251px;
     transform-origin: 100% 0px;
     opacity: 1;
-    transform: scaleX(1) scaleY(1);*//*
-} */
+    transform: scaleX(1) scaleY(1);*/
+}
 
 .dropdown-content li.divider {
     padding: 0;
