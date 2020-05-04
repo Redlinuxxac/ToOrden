@@ -13,7 +13,26 @@
 @include('plantillas.MenuDerecho')
 @endsection
 @section('content')
-
+<div class="row">
+    <div class="col s12">
+        <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Nuevo Estudiante</span></h5>
+        <ol class="breadcrumbs mb-0">
+            <li class="breadcrumb-item"><a href="#">Inicio</a>
+            </li>
+            <li class="breadcrumb-item"><a href="#">Incripcion</a>
+            </li>
+            <li class="breadcrumb-item active">Nuevo Estudiante
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="card-panel">
+    <div class="row">
+        <div class="col s12">
+           Lista de estudiatnes en costrucion
+        </div>
+    </div>
+</div>
 @endsection
 @section('script')
 <script type="text/javascript">
