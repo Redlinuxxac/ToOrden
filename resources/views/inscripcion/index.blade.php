@@ -44,7 +44,6 @@
 </div>
 <div class="card-panel">
     <div class="row">
-
         <div class="col s12  ">
             <div class="col s3 right">
                 <button class="btn waves-effect waves-light orange darken-3" type="submit" name="action">Nuevo Estudiante
@@ -52,16 +51,13 @@
                 </button>
             </div>
         </div>
-
         <div class="col s12  ">
             <div class="divider mb-3"></div>
         </div>
-
         <div class="col s12">
             <div class="col s3 input-field">
                 <input placeholder="Placeholder" id="first_name" type="text" class="validate">
                 <label for="first_name">Buscador Estudiante</label>
-
             </div>
             <div class="col s3 input-field">
                 <select>
@@ -91,10 +87,8 @@
 
         </div>
     </div>
-
 </div>
 <div class="card-panel">
-
     <table id="ToOrdentable" class="display responsive nowrap">
         <thead>
             <tr>
@@ -121,7 +115,6 @@
                 <td><a href="#"><i class="material-icons">edit</i></a></td>
                 <td><a href="#"><i class="material-icons">remove_red_eye</i></a></td>
                 <td><a href="#"><i class="material-icons">delete</i></a></td>
-
             </tr>
            @endforeach
         </tbody>

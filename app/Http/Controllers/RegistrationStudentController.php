@@ -24,7 +24,7 @@ class RegistrationStudentController extends Controller
     public function index()
     {
         $students = Student::paginate(25);
-        return view('inscripcion.index', ['students' => $students]);
+        return view('inscripcion.index', ['students' => $students]);//enviado todoa los registro de estudiantes
     }
 
     /**
