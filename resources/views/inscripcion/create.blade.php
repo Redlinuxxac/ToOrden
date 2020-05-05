@@ -13,6 +13,7 @@
 @include('plantillas.MenuDerecho')
 @endsection
 @section('content')
+<x-breadcrumbs></x-breadcrumbs>
 <div class="row">
     <div class="col s12">
     <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Nuevo Estudiante</span></h5>             
