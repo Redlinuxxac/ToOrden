@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class RegistrationStudentController extends Controller
@@ -23,6 +24,9 @@ class RegistrationStudentController extends Controller
      */
     public function index()
     {
+        // $hoy = "1975/01/16";
+        // $f = Carbon::createFromDate($hoy)->age;dd($f);
+        
         $students = Student::paginate(25);
         return view('inscripcion.index', ['students' => $students]);//enviado todoa los registro de estudiantes
     }

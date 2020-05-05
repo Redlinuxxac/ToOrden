@@ -19,7 +19,7 @@
     <ol class="breadcrumbs mb-0">
         <li class="breadcrumb-item"><a href="#">Inicio</a>
         </li>
-        <li class="breadcrumb-item"><a href="#">Incripcion</a>
+        <li class="breadcrumb-item"><a href="{{ url('inscripcion') }}">Incripcion</a>
         </li>
         <li class="breadcrumb-item active">Nuevo Estudiante
         </li>
