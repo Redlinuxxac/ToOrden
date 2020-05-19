@@ -9,19 +9,29 @@ class Breadcrumbs extends Component
     /**
      * crate new variable
      * 
-     * @return $opcion
+     * @return $lugar
      */
-    public $opcion;
+    public $lugar;
     
     /**
      * Create a new component instance.
      *
      * @return void
      */
+    public $accion;
+    
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public $label;
 
-    public function __construct(string $opcion = null)
+    public function __construct(string $lugar = null, string $accion = null,string $label= null)
     {
-        $this->opcion = $opcion;
+        $this->lugar  = $lugar;
+        $this->accion = $accion;
+        $this->label  = $label;
     }
 
     /**

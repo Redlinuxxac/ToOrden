@@ -41,3 +41,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('/inscripcion', 'RegistrationStudentController')->names('inscripcion');
+Route::post('/inscripcion/buscar', 'RegistrationStudentController@buscar')->name('inscripcion.buscar');
