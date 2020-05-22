@@ -1,16 +1,16 @@
 @extends('layouts.app0')
-@section('title', 'Inscripicion')
+    @section('title', 'Inscripicion')
 @section('MenuLogo')
-@include('plantillas.MenuLogo')
+    @include('plantillas.MenuLogo')
 @endsection
 @section('buscador')
-@include('plantillas.buscador')
+    @include('plantillas.buscador')
 @endsection
 @section('menu')
-@include('plantillas.PanelMenu', ['Seccion' => 'Home'])
+    @include('plantillas.PanelMenu', ['Seccion' => 'Home'])
 @endsection
 @section('MenuDerecho')
-@include('plantillas.MenuDerecho')
+    @include('plantillas.MenuDerecho')
 @endsection
 @section('content')
 <x-breadcrumbs lugar="Creacion De Estudiante" label="Incripcion" accion="inscripcion.index"></x-breadcrumbs>
