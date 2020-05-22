@@ -1,11 +1,11 @@
 @if($option)
 <div class="col s12">
     <div class="input-field col s6">
-        {!! Form::text('name', null ,['class' => 'validate', 'id' => "name", 'placeholder' => 'Escriba el Nombre']) !!}
+        {!! Form::text('name', null ,['class' => 'validate', 'id' => "name", 'placeholder' => 'Escriba el Nombre', 'required']) !!}
         <label for="name">Nombres</label>
     </div>
     <div class="input-field col s3">
-        {!! Form::text('lastname1', null ,['class' => 'validate', 'id' => "lastname1", 'placeholder' => 'Escriba el Apellido']) !!}
+        {!! Form::text('lastname1', null ,['class' => 'validate', 'id' => "lastname1", 'placeholder' => 'Escriba el Apellido', 'required']) !!}
         <label for="lastname1">Apellidos 1</label>
     </div>
     <div class="input-field col s3">
@@ -34,19 +34,23 @@
         </div>
     </div>
     <div class="input-field col s6">
-        {!! Form::date('birthday', null ,['class' => 'datepicker', 'id' => "birthday", 'placeholder' => 'Escriba la Fecha de Nacimiento']) !!}
+        {!! Form::date('birthday', null ,['class' => 'datepicker', 'id' => "birthday", 'placeholder' => 'Escriba la Fecha de Nacimiento', 'required']) !!}
         <label for="birthday">Fec. Nacimiento</label>
     </div>
 </div>
 
 <div class="col s12">
     <div class="input-field col s6">
-        {!! Form::text('phone', null ,['class' => 'validate', 'id' => "phne", 'placeholder' => '1+ 809-000-000']) !!}
+        {!! Form::text('phone[]', null ,['class' => 'validate', 'id' => "phne", 'placeholder' => '1+ 809-000-000']) !!}
         <label for="phone">Telephone</label>
+    </div>
+    <div class="input-field col s6">
+        {!! Form::text('email[]', null ,['class' => 'validate', 'id' => "phne", 'placeholder' => 'User@email.com']) !!}
+        <label for="phone">E-mail</label>
     </div>
 </div>
 <div class="input-field col s12">
-        {!! Form::text('adress', null ,['class' => 'validate', 'id' => "adress", 'placeholder' => 'direccion']) !!}
+        {!! Form::text('adress[]', null ,['class' => 'validate', 'id' => "adress", 'placeholder' => 'direccion']) !!}
     <label for="adress">Direcion</label>
 </div>
 
@@ -79,7 +83,7 @@
 
 <div class="col s12">
     <div class="input-field col s6">
-        <textarea id="textarea1" class="materialize-textarea" placeholder = 'Escriba su observacion'></textarea>
+        <textarea id="textarea" class="materialize-textarea" placeholder = 'Escriba su observacion'></textarea>
         <label for="textarea1">Observacion</label>
     </div>
     <div class="input-field col s6">

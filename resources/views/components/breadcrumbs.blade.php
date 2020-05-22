@@ -7,8 +7,9 @@
             @if($accion==null)
             <li class="breadcrumb-item active">{{ $label }}</li>
             @else
-            <li class="breadcrumb-item active"><a href="{{ route($accion)}}">Incripcion</a></li>
+            <li class="breadcrumb-item"><a href="{{ route($accion)}}">Incripcion</a></li>
             @endif
+            <li class="breadcrumb-item active">Crear</li>
         </ol>
     </div>
 </div>

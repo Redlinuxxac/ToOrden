@@ -48,8 +48,7 @@ class RegistrationStudentController extends Controller
                 echo $section->name;
                 echo "<br>";
                 echo $section->capacidad;
-                echo "<br>";
-        
+                echo "<br>"; 
             }
         }*/
         //dd($sections->teacher());
@@ -74,7 +73,7 @@ class RegistrationStudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

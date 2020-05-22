@@ -17,7 +17,7 @@
 <div class="card-panel">
     <div class="row">
         <div class="col s12">
-            {!! Form::open(['url' => 'incripcion', 'method' => 'post']) !!}
+            {!! Form::open(['route' => 'inscripcion.store', 'method' => 'post']) !!}
                 <x-field option="inscripcion"></x-field>
             {!! Form::close() !!}
         </div>
@@ -51,11 +51,13 @@
       
     const Calender = document.querySelector('.datepicker');
            M.Datepicker.init(Calender, {
-              format:'dd-mmmm-yyyy'
+             // format:'dd-mm-yyyy'             
+             format:'yyyy-mm-dd'
            });
-
-          // $('#textarea1').val('New Text');
-           M.textareaAutoResize($('#textarea1'));
+           if($('#textarea1').length){
+                // $('#textarea1').val('New Text');
+                M.textareaAutoResize($('#textarea1'));
+            }
 
            document.addEventListener('DOMContentLoaded', function() {
              var elems = document.querySelectorAll('select');
