@@ -13,23 +13,13 @@
 @include('plantillas.MenuDerecho')
 @endsection
 @section('content')
-<div class="row">
-    <div class="col s12">
-        <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Nuevo Estudiante</span></h5>
-        <ol class="breadcrumbs mb-0">
-            <li class="breadcrumb-item"><a href="#">Inicio</a>
-            </li>
-            <li class="breadcrumb-item"><a href="#">Incripcion</a>
-            </li>
-            <li class="breadcrumb-item active">Nuevo Estudiante
-            </li>
-        </ol>
-    </div>
-</div>
+<x-breadcrumbs lugar="Edicion De Estudiante" label="Incripcion" accion="inscripcion.index"></x-breadcrumbs>
 <div class="card-panel">
     <div class="row">
         <div class="col s12">
-           Lista de estudiatnes en costrucion
+            {!! Form::model($student, ['method' => 'post', 'action' =>['RegistrationStudentController@update', $student->id]]) !!}
+                <x-field option="inscripcion"></x-field>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>
@@ -37,6 +27,7 @@
 @section('script')
 <script type="text/javascript">
     $(document).ready(function() {
+        $(".menu-to ").toggleClass("collapse");
         $(".menuBT").click(function() {
             event.preventDefault();
             $(".menu-to ").toggleClass("collapse")
@@ -63,7 +54,7 @@
         format: 'dd-mmmm-yyyy'
     });
 
-    $('#textarea1').val('New Text');
+    //$('#textarea1').val('New Text');
     M.textareaAutoResize($('#textarea1'));
 
     document.addEventListener('DOMContentLoaded', function() {

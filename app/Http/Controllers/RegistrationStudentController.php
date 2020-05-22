@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Matter;
+use App\Period;
+use App\Section;
 use App\Student;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class RegistrationStudentController extends Controller
@@ -21,10 +25,34 @@ class RegistrationStudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::paginate(25);
-        return view('inscripcion.index', ['students' => $students]);//enviado todoa los registro de estudiantes
+        // $hoy = "1975/01/16";
+        // $f = Carbon::createFromDate($hoy)->age;dd($f);
+        //dd($request->name);
+        $students  = Student::Ahora('2019/2020 2')->paginate(5);
+        //dd($students);
+        $sections  = Section::paginate(5);
+        $materias  = Matter::all();
+        $periods   = Period::where('name', 'like', '2019/2020 2')->paginate(5);
+        /*
+        foreach($students as $student)
+        {
+            echo "Estudiante:<br>";
+            echo $student->name;
+            echo "<br>";
+            foreach($student->sections as $section)
+            {
+                echo $section->id;
+                echo "<br>";
+                echo $section->name;
+                echo "<br>";
+                echo $section->capacidad;
+                echo "<br>"; 
+            }
+        }*/
+        //dd($sections->teacher());
+        return view('inscripcion.index', ['sections' => $sections, 'periods' =>  $periods, 'materias' => $materias]);//enviado todoa los registro de estudiantes
     }
 
     /**
@@ -45,7 +73,7 @@ class RegistrationStudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
@@ -54,9 +82,10 @@ class RegistrationStudentController extends Controller
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show($id)
     {
-        return view('inscripcion.show');
+        $student = Student::findOrFail($id);
+        return view('inscripcion.show', ['Stunent' => $student]);
     }
 
     /**
@@ -65,9 +94,11 @@ class RegistrationStudentController extends Controller
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit($id)
     {
-        return view('inscripcion.edit');
+        $student = Student::findOrFail($id);
+        //dd($student);
+        return view('inscripcion.edit', ['student' =>$student]);
     }
 
     /**
@@ -88,8 +119,25 @@ class RegistrationStudentController extends Controller
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Student $student)
+    public function destroy($id)
     {
-        //
+        $student = Student::find($id);
+        $student->delete();
+        return redirect('inscripcion')->with('status', 'El Registro fue Borrado');
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Student  $student
+     * @return \Illuminate\Http\Response
+     */
+    public function buscar(Request $request)
+    {
+        $name = $request->name;
+        $students =  Student::where('name', 'like', '%'.$name.'%')->paginate(25);        
+        return view('components.lista-students', ['students' => $students, 'name' => $name]);
+        //return response()->json($request, 200);
+    }
+
 }

@@ -31,7 +31,7 @@ class HomeController extends Controller
         $user->school;
         $tipoUser = $user->userable_type;
         $student = Student::find(1);
-        $student->sections();
+       // $student->sections();
         //dd($student->sections);
         //dd($user->userable->teacher->classes());
         //dd($user->userable);
