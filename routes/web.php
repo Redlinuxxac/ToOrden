@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +36,12 @@ Route::get('/panel/inicio', function () {
     return view('inicio');
 });
 
-
+Route::get('storage-link', function(){
+    Artisan::call('storage:link');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('/inscripcion', 'RegistrationStudentController')->names('inscripcion');
+Route::post('/inscripcion/buscar', 'RegistrationStudentController@buscar')->name('inscripcion.buscar');

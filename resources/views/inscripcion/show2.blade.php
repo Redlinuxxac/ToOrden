@@ -13,22 +13,6 @@
 @include('plantillas.MenuDerecho')
 @endsection
 @section('content')
-<style>
-    .paginar>nav{
-        background: #fff;
-    }
-    .paginar>nav>ul{
-        
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .pagination li.active {
-        background: #fff;
-        color: blue;
-        line-height: initial;
-        font-size: 21px;
-    }
-</style>
 <div class="row">
     <div class="col  s12">
         <h5 class="breadcrumbs-title mt-0 mb-0 display-inline hide-on-small-and-down"><span>Listado de Estudiantes</span></h5>
@@ -141,7 +125,6 @@
 @section('script')
 <script type="text/javascript">
     $(document).ready(function() {
-            $(".menu-to ").toggleClass("collapse")
         $(".menuBT").click(function() {
             event.preventDefault();
             $(".menu-to ").toggleClass("collapse")

@@ -21,6 +21,7 @@
             	<form class="col l4 s10 offset-l4 offset-s1" action="{{ route('login') }}" method="post">
                    {{ csrf_field() }}
                    <div class="input-field col s12">
+                   <!-- <img src="{{ asset('storage/img/person1.jpg') }}" alt="image"> -->
                     <select name="school_id" id="school_id" class="input-field col s12">
                         <option value="1">Ponsca</option>
                         <option value="2">Santa Rosa</option>

@@ -9,12 +9,12 @@ class Teacher extends Model
     public function sections()
     {
         return $this->belongsToMany(Section::class,'section_student_teacher')
-            ->withPivot('section_id');
+            ->withPivot('student_id');
     }
     public function students()
     {
         return $this->belongsToMany(Student::class,'section_student_teacher')
-            ->withPivot('student_id');
+            ->withPivot('section_id');
     }
     public function addresses()
     {
