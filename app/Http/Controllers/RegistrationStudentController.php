@@ -52,7 +52,7 @@ class RegistrationStudentController extends Controller
             }
         }*/
         //dd($sections->teacher());
-        return view('inscripcion.show2', ['sections' => $sections, 'periods' =>  $periods, 'materias' => $materias]);//enviado todoa los registro de estudiantes
+        return view('inscripcion.index', ['sections' => $sections, 'periods' =>  $periods, 'materias' => $materias]);//enviado todoa los registro de estudiantes
     }
 
     /**
